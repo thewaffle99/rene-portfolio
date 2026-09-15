@@ -453,11 +453,13 @@ export default function Home() {
                 My experience is also available as a read-only MCP server for Claude, Cursor and other MCP clients.
               </p>
               <div
-                className="font-mono text-[12px] leading-[1.6] rounded-[10px] px-[18px] py-4 overflow-x-auto whitespace-nowrap"
+                className="font-mono text-[12px] leading-[1.6] rounded-[10px] px-[18px] py-4"
                 style={{ background: colors.ink, color: "#E6E7EC" }}
               >
-                <span style={{ color: colors.accentOnBlack }}>$</span> claude mcp add --transport http rene
-                https://{host}/mcp
+                <div>
+                  <span style={{ color: colors.accentOnBlack }}>$</span> claude mcp add --transport http rene \
+                </div>
+                <div className="pl-4 break-all">https://{host}/mcp</div>
               </div>
             </div>
           </div>

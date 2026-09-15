@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RevealFade, RevealLine, RevealPanel } from "@/components/Reveal";
 import { PhotoCoinFlip } from "@/components/PhotoCoinFlip";
+import { AskChat } from "@/components/AskChat";
+import { ContactForm } from "@/components/ContactForm";
+import { useAskChat, MAX_MESSAGE_CHARS, type AskChatState } from "@/hooks/useAskChat";
 
 const defaultColors = {
   paper: "#F5F6F8",
@@ -28,7 +31,22 @@ const ghibliColors = {
 
 const themeTransition = "background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease";
 
-function AskPanelBody({ colors }: { colors: typeof defaultColors }) {
+function scrollToAsk() {
+  document.getElementById("ask")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function AskPanelBody({ colors, chat }: { colors: typeof defaultColors; chat: AskChatState }) {
+  const [heroInput, setHeroInput] = useState("");
+  const disabled = chat.loading || chat.atTurnLimit;
+
+  function submit(text: string) {
+    const trimmed = text.trim();
+    if (!trimmed || trimmed.length > MAX_MESSAGE_CHARS || disabled) return;
+    setHeroInput("");
+    scrollToAsk();
+    chat.send(trimmed);
+  }
+
   return (
     <>
       <span className="font-mono text-[12px] tracking-wide" style={{ color: colors.paleBlue }}>
@@ -38,23 +56,46 @@ function AskPanelBody({ colors }: { colors: typeof defaultColors }) {
         An AI assistant that answers from notes I wrote, and tells you when it doesn&rsquo;t know.
       </p>
       <div className="flex items-center gap-2 h-14 pl-5 pr-2 rounded-xl" style={{ background: "#fff" }}>
-        <span className="flex-grow text-[15px]" style={{ color: "#6A6F80" }}>
-          Ask about my experience
-        </span>
-        <span
-          className="flex items-center h-[42px] px-[18px] rounded-lg font-semibold text-sm"
+        <input
+          type="text"
+          value={heroInput}
+          onChange={(e) => setHeroInput(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") submit(heroInput);
+          }}
+          disabled={disabled}
+          placeholder={disabled ? "Conversation limit reached" : "Ask about my experience"}
+          maxLength={MAX_MESSAGE_CHARS + 20}
+          className="flex-grow bg-transparent outline-none text-[15px]"
+          style={{ color: "#2A2D36" }}
+        />
+        <button
+          type="button"
+          onClick={() => submit(heroInput)}
+          disabled={disabled || heroInput.trim().length === 0}
+          className="flex items-center h-[42px] px-[18px] rounded-lg font-semibold text-sm disabled:opacity-40"
           style={{ background: colors.ink, color: "#fff", transition: themeTransition }}
         >
           Ask
-        </span>
+        </button>
       </div>
       <div className="flex flex-wrap gap-2">
-        <span className="px-3 py-1.5 rounded-full text-[13px]" style={{ border: "1px solid rgba(255,255,255,0.35)" }}>
+        <button
+          type="button"
+          onClick={() => submit("What's Rene's biggest platform win?")}
+          className="px-3 py-1.5 rounded-full text-[13px]"
+          style={{ border: "1px solid rgba(255,255,255,0.35)", color: "#fff" }}
+        >
           What&rsquo;s Rene&rsquo;s biggest platform win?
-        </span>
-        <span className="px-3 py-1.5 rounded-full text-[13px]" style={{ border: "1px solid rgba(255,255,255,0.35)" }}>
+        </button>
+        <button
+          type="button"
+          onClick={() => submit("What roles is he open to?")}
+          className="px-3 py-1.5 rounded-full text-[13px]"
+          style={{ border: "1px solid rgba(255,255,255,0.35)", color: "#fff" }}
+        >
           What roles is he open to?
-        </span>
+        </button>
       </div>
     </>
   );
@@ -63,6 +104,13 @@ function AskPanelBody({ colors }: { colors: typeof defaultColors }) {
 export default function Home() {
   const [ghibli, setGhibli] = useState(false);
   const colors = ghibli ? ghibliColors : defaultColors;
+  const chat = useAskChat();
+  const [host, setHost] = useState("your-domain.com");
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- window.location is only available client-side, after mount
+    setHost(window.location.host);
+  }, []);
 
   return (
     <div style={{ background: colors.paper, transition: themeTransition }}>
@@ -72,12 +120,6 @@ export default function Home() {
         style={{ background: colors.paper, transition: themeTransition }}
       >
         <nav className="relative z-10 flex items-center px-[5vw] md:px-0 py-6">
-          <PhotoCoinFlip
-            frontSrc="/headshot.jpg"
-            backSrc="/headshot-ghibli.jpg"
-            flipped={ghibli}
-            onToggle={() => setGhibli((g) => !g)}
-          />
           {/* This cluster's width matches the blue panel's exactly (min(42vw,480px)), right-flush
               at md+, so the links always sit on the blue and are never split across the paper
               edge — the white text stays readable at every screen width. */}
@@ -110,22 +152,35 @@ export default function Home() {
             Below md it's just two stacked blocks. */}
         <div className="px-[5vw] pt-10 md:pt-16 md:grid md:grid-cols-[minmax(0,1fr)_min(42vw,480px)] md:gap-10 md:items-stretch">
           <div>
-            <h1
-              className="font-display"
-              style={{
-                fontSize: "clamp(64px, 12vw, 200px)",
-                lineHeight: 0.84,
-                fontWeight: 800,
-                letterSpacing: "-0.045em",
-                color: colors.ink,
-                margin: 0,
-              }}
-            >
-              <RevealLine eager>Rene</RevealLine>
-              <RevealLine eager delay={1}>
-                Marino
-              </RevealLine>
-            </h1>
+            <div className="flex items-center">
+              <h1
+                className="font-display"
+                style={{
+                  fontSize: "clamp(64px, 12vw, 200px)",
+                  lineHeight: 0.84,
+                  fontWeight: 800,
+                  letterSpacing: "-0.045em",
+                  color: colors.ink,
+                  margin: 0,
+                }}
+              >
+                <RevealLine eager>Rene</RevealLine>
+                <RevealLine eager delay={1}>
+                  Marino
+                </RevealLine>
+              </h1>
+              {/* Spacers split the leftover row width evenly, so the coin sits in the
+                  middle of the gap between the name and the column's right edge. */}
+              <div className="flex-1" />
+              <PhotoCoinFlip
+                frontSrc="/headshot.jpg"
+                backSrc="/headshot-ghibli.jpg"
+                flipped={ghibli}
+                onToggle={() => setGhibli((g) => !g)}
+                accentColor={colors.ultramarine}
+              />
+              <div className="flex-1" />
+            </div>
 
             <RevealFade
               eager
@@ -171,7 +226,7 @@ export default function Home() {
               }}
             />
             <RevealFade eager delayMs={1300} className="relative flex flex-col gap-4 p-6">
-              <AskPanelBody colors={colors} />
+              <AskPanelBody colors={colors} chat={chat} />
             </RevealFade>
           </RevealPanel>
         </div>
@@ -192,7 +247,7 @@ export default function Home() {
             }}
           />
           <RevealFade eager delayMs={1300} className="relative flex flex-col gap-4 p-10">
-            <AskPanelBody colors={colors} />
+            <AskPanelBody colors={colors} chat={chat} />
           </RevealFade>
         </RevealPanel>
       </section>
@@ -402,79 +457,12 @@ export default function Home() {
                 style={{ background: colors.ink, color: "#E6E7EC" }}
               >
                 <span style={{ color: colors.accentOnBlack }}>$</span> claude mcp add --transport http rene
-                https://[YOUR-DOMAIN]/mcp
+                https://{host}/mcp
               </div>
             </div>
           </div>
 
-          <div
-            className="flex flex-col rounded-[18px] overflow-hidden"
-            style={{ background: "#fff", color: colors.ink, boxShadow: "0 30px 60px rgba(10,10,40,0.25)" }}
-          >
-            <div
-              className="flex items-center justify-between px-6 py-4"
-              style={{ borderBottom: "1px solid #E6E8EE" }}
-            >
-              <span style={{ fontSize: 14, fontWeight: 600 }}>Assistant</span>
-              <span className="font-mono text-[10px]" style={{ color: "#6A6F80" }}>
-                AI · ANSWERS FROM RENE&rsquo;S NOTES
-              </span>
-            </div>
-            <div className="flex flex-col gap-4 px-6 py-6">
-              <div
-                className="self-end max-w-[80%] sm:max-w-[70%] px-3.5 py-2.5 rounded-2xl"
-                style={{ background: colors.ink, color: "#fff", fontSize: 15, lineHeight: 1.5 }}
-              >
-                What&rsquo;s Rene&rsquo;s biggest platform win?
-              </div>
-              <p style={{ maxWidth: "95%", fontSize: 15, lineHeight: 1.65, color: "#2A2D36", margin: 0 }}>
-                Rene led a self-service platform at a Fortune 50 healthcare company that lets developers create
-                MCP servers from the 4,000+ APIs in the enterprise catalog, with security and governance approvals
-                built into the workflow. It fully replaced manual provisioning.
-              </p>
-              <div
-                className="font-mono flex flex-col gap-2 rounded-[10px] px-[18px] py-4"
-                style={{ background: "#F1F2F6", fontSize: 11, lineHeight: 1.5, color: colors.bodyGrey }}
-              >
-                <div className="flex justify-between" style={{ color: "#8A8E9C" }}>
-                  <span>SHOW YOUR WORK</span>
-                  <span>SAMPLE</span>
-                </div>
-                <div className="flex gap-4">
-                  <span className="w-[68px]" style={{ color: colors.ultramarine }}>
-                    SOURCE
-                  </span>
-                  <span>facts.md › humana-mcp-platform</span>
-                </div>
-                <div className="flex gap-4">
-                  <span className="w-[68px]" style={{ color: colors.ultramarine }}>
-                    CHECKS
-                  </span>
-                  <span>guardrails passed · 0 flagged</span>
-                </div>
-                <div className="flex gap-4">
-                  <span className="w-[68px]" style={{ color: colors.ultramarine }}>
-                    COST
-                  </span>
-                  <span>1.2s · 240 tokens · $0.0003</span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="flex items-center gap-2 mx-6 mb-6 h-[52px] pl-4 pr-2 rounded-xl"
-              style={{ background: colors.paper, border: "1px solid #DADCE3" }}
-            >
-              <span className="flex-grow" style={{ fontSize: 15, color: "#8A8E9C" }}>
-                Ask a question
-              </span>
-              <span
-                className="flex items-center h-[38px] px-4 rounded-lg font-semibold text-sm"
-                style={{ background: colors.ultramarine, color: "#fff", transition: themeTransition }}
-              >
-                Ask
-              </span>
-            </div>
-          </div>
+          <AskChat colors={colors} chat={chat} />
         </div>
       </section>
 
@@ -504,16 +492,7 @@ export default function Home() {
             <p style={{ fontSize: 17, lineHeight: 1.55, color: "#2A2D36", margin: 0 }}>
               Hiring for AI or platform product roles? I&rsquo;d like to hear what you&rsquo;re building.
             </p>
-            <a
-              href="https://www.linkedin.com/in/rene-marino-597b2665/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between h-[58px] px-5 rounded-xl text-[16px] font-semibold"
-              style={{ background: colors.ink, color: "#fff", transition: themeTransition }}
-            >
-              <span>Message me on LinkedIn</span>
-              <span>→</span>
-            </a>
+            <ContactForm colors={colors} />
           </div>
         </div>
         <div

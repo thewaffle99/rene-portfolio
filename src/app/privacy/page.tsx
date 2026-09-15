@@ -17,15 +17,26 @@ const sections: { title: string; body: string[] }[] = [
   {
     title: "The short version",
     body: [
-      "This site doesn't have accounts, doesn't sell anything, and doesn't run ad trackers. The only place it handles any data from you is the “Ask about my experience” assistant.",
+      "This site doesn't have accounts, doesn't sell anything, and doesn't run ad trackers. The two places it handles any data from you are the “Ask about my experience” assistant and the contact form.",
     ],
   },
   {
     title: "The AI assistant",
     body: [
       "Questions you ask are sent to Anthropic's Claude API to generate an answer, drawn only from a fact file I wrote about myself. If the answer isn't in there, it says so and points you to me directly instead of guessing.",
-      "What's kept afterward: the text of the question only, anonymized — no IP address, no name, nothing that identifies you. It's kept for 30 days, and only used to see what people commonly ask so I can improve the content.",
-      "Before your first message, a quick bot check (Cloudflare Turnstile) runs to keep the assistant from being spammed or abused. It doesn't track you across other sites.",
+      "This site doesn't store or log your questions itself. Anthropic's own data retention policy applies to processing the request — see Anthropic's privacy policy for details.",
+    ],
+  },
+  {
+    title: "The contact form",
+    body: [
+      "If you use the contact form, the name, email, and message you enter are sent by email to me using Resend, a transactional email provider. That's the only thing the form is used for — I don't add you to a list or use it for anything else. Resend's own privacy policy applies to that delivery.",
+    ],
+  },
+  {
+    title: "Bot protection",
+    body: [
+      "Before the assistant or the contact form will submit anything, Cloudflare Turnstile runs a quick, invisible check to confirm you're a real visitor rather than a bot. It doesn't show a puzzle in the vast majority of cases and doesn't track you across other sites. Cloudflare's own privacy policy applies to that check.",
     ],
   },
   {

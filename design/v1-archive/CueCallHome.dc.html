@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #111318; font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; color: #1A1C22; -webkit-font-smoothing: antialiased; }
+    a { color: #3D5AFE; text-decoration: none; } a:hover { color: #2A45E0; }
+    .dark a { color: #F2A33A; } .dark a:hover { color: #FFC06B; }
+    .display { font-family: "Bricolage Grotesque", "Arial Narrow", sans-serif; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+    h1, h2, h3, p { margin: 0; text-wrap: pretty; }
+    @keyframes houseToHalf { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes nameGo { from { font-variation-settings: "wdth" 75; color: #3A3D47; } to { font-variation-settings: "wdth" 90; color: #F3F4F7; } }
+    @keyframes riseIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    .spot { animation: houseToHalf 1.6s ease-out both; }
+    .name { animation: nameGo 1.6s cubic-bezier(.2,.7,.1,1) .3s both; }
+    .rise { animation: riseIn .9s ease-out 1.2s both; }
+    @media (prefers-reduced-motion: reduce) { .spot, .name, .rise { animation: none; } }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #111318;">
+
+  <!-- CUE 01 — HERO -->
+  <section class="dark" style="position: relative; height: 920px; overflow: hidden; background: #111318; color: #F3F4F7;">
+    <div class="spot" style="position: absolute; inset: 0; background: radial-gradient(ellipse 46% 52% at 50% 44%, rgba(242,163,58,0.20) 0%, rgba(242,163,58,0.07) 38%, rgba(17,19,24,0) 70%);"></div>
+    <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 180px; background: linear-gradient(180deg, rgba(17,19,24,0) 0%, #0C0D11 100%);"></div>
+
+    <nav style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 28px 64px;">
+      <div class="display" style="font-size: 20px; font-weight: 700; letter-spacing: -0.2px; font-variation-settings: 'wdth' 85;">Rene Marino</div>
+      <div style="display: flex; align-items: center; gap: 36px; font-size: 15px;">
+        <a href="#" style="color: #C5C8D0;">Work</a>
+        <a href="#" style="color: #C5C8D0;">Ask</a>
+        <a href="#" style="color: #C5C8D0;">Resume</a>
+        <a href="#" style="display: flex; align-items: center; height: 40px; padding: 0 18px; border: 1px solid #3A3D47; border-radius: 6px; color: #F3F4F7;">Get in touch</a>
+      </div>
+    </nav>
+
+    <div style="position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 96px;">
+      <div class="mono rise" style="display: flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 2px; color: #8A8F9C; text-transform: uppercase;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #F2A33A; box-shadow: 0 0 12px #F2A33A;"></span>
+        <span>Standby cue 01 … Go</span>
+      </div>
+      <h1 class="display name" style="margin-top: 20px; font-size: 188px; line-height: 0.92; font-weight: 700; letter-spacing: -4px; white-space: nowrap; font-variation-settings: 'wdth' 90; color: #F3F4F7;">Rene Marino</h1>
+      <p class="display rise" style="margin-top: 28px; font-size: 40px; line-height: 1.15; font-weight: 500; letter-spacing: -0.6px; text-align: center; color: #F3F4F7;">Every launch is a live show. I call the cues.</p>
+      <p class="rise" style="margin-top: 16px; max-width: 640px; font-size: 18px; line-height: 1.55; text-align: center; color: #A3A8B3;">Technical product manager for AI and API platforms. Former full-stack engineer. Former touring stage manager.</p>
+
+      <div class="rise" style="margin-top: 44px; width: 640px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 8px; height: 60px; padding: 0 8px 0 22px; background: #1A1C22; border: 1px solid #343741; border-radius: 10px;">
+          <span style="flex-grow: 1; font-size: 17px; color: #7E8390;">Ask anything about my work…</span>
+          <span style="display: flex; align-items: center; height: 44px; padding: 0 20px; background: #F2A33A; color: #111318; border-radius: 7px; font-weight: 600; font-size: 15px;">Ask</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+          <span style="padding: 7px 14px; border: 1px solid #2C2F38; border-radius: 999px; font-size: 14px; color: #A3A8B3;">What has Rene shipped with MCP?</span>
+          <span style="padding: 7px 14px; border: 1px solid #2C2F38; border-radius: 999px; font-size: 14px; color: #A3A8B3;">How does he work with engineers?</span>
+          <span style="padding: 7px 14px; border: 1px solid #2C2F38; border-radius: 999px; font-size: 14px; color: #A3A8B3;">Why go from touring to tech?</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUE 02 — THE CUE SHEET (origin) -->
+  <section style="background: #ECEEF1; padding: 140px 120px 150px;">
+    <div style="display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 96px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="mono" style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #6B7080;">Cue 02 · The cue sheet</div>
+        <h2 class="display" style="font-size: 68px; line-height: 0.98; font-weight: 700; letter-spacing: -2px; font-variation-settings: 'wdth' 88;">Same job. Bigger stages.</h2>
+        <p style="font-size: 18px; line-height: 1.6; color: #444954;">I learned to run a show from the wings: hundreds of moving parts, one call sheet, no second take. I still work that way. Now the crew writes code.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #C9CED6;">
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) 128px 24px; gap: 24px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #D3D7DE;">
+          <span class="mono" style="font-size: 14px; color: #8A8F9C;">01</span>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <h3 class="display" style="font-size: 28px; font-weight: 600; letter-spacing: -0.4px; color: #6B7080;">Told stories for a living</h3>
+            <p style="font-size: 16px; line-height: 1.55; color: #7A7F8B;">Radio-TV-Film at Cal State Fullerton, then freelance video and audio production.</p>
+          </div>
+          <span class="mono" style="font-size: 14px; color: #8A8F9C;">2011–2017</span>
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #C3C8D1;"></span>
+        </div>
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) 128px 24px; gap: 24px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #D3D7DE;">
+          <span class="mono" style="font-size: 14px; color: #8A8F9C;">02</span>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <h3 class="display" style="font-size: 28px; font-weight: 600; letter-spacing: -0.4px; color: #6B7080;">Called the show</h3>
+            <p style="font-size: 16px; line-height: 1.55; color: #7A7F8B;">Stage manager on international tours for Nine Inch Nails, Foo Fighters and The Lonely Island. Crews of 15+.</p>
+          </div>
+          <span class="mono" style="font-size: 14px; color: #8A8F9C;">2017–2020</span>
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #C3C8D1;"></span>
+        </div>
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) 128px 24px; gap: 24px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #D3D7DE;">
+          <span class="mono" style="font-size: 14px; color: #8A8F9C;">03</span>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <h3 class="display" style="font-size: 28px; font-weight: 600; letter-spacing: -0.4px; color: #6B7080;">Learned to build it</h3>
+            <p style="font-size: 16px; line-height: 1.55; color: #7A7F8B;">Full-stack certificates in MERN and Python, then teaching assistant at Coding Dojo.</p>
+          </div>
+          <span class="mono" style="font-size: 14px; color: #8A8F9C;">2022</span>
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #C3C8D1;"></span>
+        </div>
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) 128px 24px; gap: 24px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #D3D7DE;">
+          <span class="mono" style="font-size: 14px; color: #8A8F9C;">04</span>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <h3 class="display" style="font-size: 28px; font-weight: 600; letter-spacing: -0.4px; color: #6B7080;">Shipped AI software</h3>
+            <p style="font-size: 16px; line-height: 1.55; color: #7A7F8B;">Software engineer on AI-driven products at Dark Matter Technologies. Node APIs, AWS, test-driven development.</p>
+          </div>
+          <span class="mono" style="font-size: 14px; color: #8A8F9C;">2022–2025</span>
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #C3C8D1;"></span>
+        </div>
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) 128px 24px; gap: 24px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #D3D7DE;">
+          <span class="mono" style="font-size: 14px; color: #1A1C22; font-weight: 500;">05</span>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <h3 class="display" style="font-size: 28px; font-weight: 600; letter-spacing: -0.4px; color: #1A1C22;">Run the platform</h3>
+            <p style="font-size: 16px; line-height: 1.55; color: #444954;">Product manager for self-service MCP servers at Humana, across 4,000+ internal APIs.</p>
+          </div>
+          <span class="mono" style="font-size: 14px; color: #1A1C22; font-weight: 500;">2025–now</span>
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #F2A33A; box-shadow: 0 0 0 4px rgba(242,163,58,0.25), 0 0 14px rgba(242,163,58,0.7);"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUE 03 — SELECTED WORK -->
+  <section class="dark" style="background: #111318; color: #F3F4F7; padding: 140px 120px;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div class="mono" style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #8A8F9C;">Cue 03 · Selected work</div>
+        <h2 class="display" style="font-size: 68px; line-height: 0.98; font-weight: 700; letter-spacing: -2px; font-variation-settings: 'wdth' 88;">Three shows I called.</h2>
+      </div>
+      <p style="max-width: 420px; font-size: 17px; line-height: 1.6; color: #A3A8B3;">Each one has two halves: the product call I made, and how it was built.</p>
+    </div>
+
+    <div style="margin-top: 72px; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; padding: 64px; background: #16181E; border: 1px solid #252831; border-radius: 12px;">
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="mono" style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #F2A33A;">Humana · 2025–now</div>
+        <h3 class="display" style="font-size: 50px; line-height: 1.02; font-weight: 700; letter-spacing: -1.2px; font-variation-settings: 'wdth' 88;">MCP servers on demand, for 4,000+ APIs</h3>
+        <p style="font-size: 17px; line-height: 1.6; color: #B7BBC5;">Developers used to file a ticket and wait on the platform team. Now they create, subscribe to and delete MCP servers themselves, right from the API catalog, with security approvals built in.</p>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 8px; border-top: 1px solid #2A2D36;">
+          <div style="display: flex; flex-direction: column; gap: 4px; padding-top: 16px;">
+            <span class="display" style="font-size: 34px; font-weight: 700;">4,000+</span>
+            <span style="font-size: 14px; color: #8A8F9C;">APIs available</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding-top: 16px;">
+            <span class="display" style="font-size: 34px; font-weight: 700;">0</span>
+            <span style="font-size: 14px; color: #8A8F9C;">manual setups left</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding-top: 16px;">
+            <span class="display" style="font-size: 34px; font-weight: 700;">3</span>
+            <span style="font-size: 14px; color: #8A8F9C;">teams led</span>
+          </div>
+        </div>
+        <a href="#" style="font-size: 16px; font-weight: 500;">Read the case study →</a>
+      </div>
+
+      <svg viewBox="0 0 620 420" width="100%" style="display: block;" fill="none" stroke-linecap="round">
+        <rect x="10" y="150" width="170" height="120" rx="8" stroke="#3A3D47" stroke-width="1.5"></rect>
+        <text x="30" y="192" fill="#8A8F9C" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5">API CATALOG</text>
+        <text x="30" y="228" fill="#F3F4F7" font-family="Bricolage Grotesque, sans-serif" font-size="30" font-weight="700">4,000+</text>
+        <text x="30" y="252" fill="#8A8F9C" font-family="IBM Plex Sans, sans-serif" font-size="13">internal APIs</text>
+
+        <path d="M180 210 H250" stroke="#F2A33A" stroke-width="2"></path>
+        <rect x="250" y="178" width="120" height="64" rx="32" stroke="#F2A33A" stroke-width="1.5"></rect>
+        <text x="310" y="206" text-anchor="middle" fill="#F2A33A" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1">APPROVAL</text>
+        <text x="310" y="224" text-anchor="middle" fill="#8A8F9C" font-family="IBM Plex Mono, monospace" font-size="11">governance</text>
+
+        <path d="M370 210 H430" stroke="#F2A33A" stroke-width="2"></path>
+        <rect x="430" y="40" width="180" height="96" rx="8" stroke="#3A3D47" stroke-width="1.5"></rect>
+        <text x="450" y="80" fill="#F3F4F7" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600">MCP server</text>
+        <text x="450" y="104" fill="#8A8F9C" font-family="IBM Plex Mono, monospace" font-size="11">claims-api</text>
+        <rect x="430" y="162" width="180" height="96" rx="8" stroke="#F2A33A" stroke-width="1.5" fill="rgba(242,163,58,0.06)"></rect>
+        <text x="450" y="202" fill="#F3F4F7" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600">MCP server</text>
+        <text x="450" y="226" fill="#F2A33A" font-family="IBM Plex Mono, monospace" font-size="11">created · self-serve</text>
+        <rect x="430" y="284" width="180" height="96" rx="8" stroke="#3A3D47" stroke-width="1.5"></rect>
+        <text x="450" y="324" fill="#F3F4F7" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600">MCP server</text>
+        <text x="450" y="348" fill="#8A8F9C" font-family="IBM Plex Mono, monospace" font-size="11">provider-api</text>
+        <path d="M400 210 V88 H430 M400 210 V332 H430" stroke="#3A3D47" stroke-width="1.5"></path>
+        <text x="10" y="404" fill="#6B7080" font-family="IBM Plex Mono, monospace" font-size="11">Before: ticket → platform team → wait.  After: one click in the catalog.</text>
+      </svg>
+    </div>
+
+    <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px;">
+      <div style="display: flex; flex-direction: column; gap: 16px; padding: 44px; background: #16181E; border: 1px solid #252831; border-radius: 12px;">
+        <div class="mono" style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #8A8F9C;">Personal project</div>
+        <h3 class="display" style="font-size: 36px; line-height: 1.05; font-weight: 700; letter-spacing: -0.8px; font-variation-settings: 'wdth' 88;">Web Builder: an AI crew that ships websites</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #B7BBC5;">A product manager, developer and QA agent turn a one-page brief into a tested site. After five failed rounds they stop and ask instead of guessing.</p>
+        <a href="#" style="font-size: 16px; font-weight: 500;">Read the case study →</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px; padding: 44px; background: #16181E; border: 1px solid #252831; border-radius: 12px;">
+        <div class="mono" style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #8A8F9C;">This site</div>
+        <h3 class="display" style="font-size: 36px; line-height: 1.05; font-weight: 700; letter-spacing: -0.8px; font-variation-settings: 'wdth' 88;">An assistant that only knows what I wrote</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #B7BBC5;">A chatbot and a public, read-only MCP server, built to resist prompt injection and capped so bots can't run up the bill.</p>
+        <a href="#" style="font-size: 16px; font-weight: 500;">Read the case study →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUE 04 — ASK -->
+  <section style="background: #ECEEF1; padding: 140px 120px;">
+    <div style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 80px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="mono" style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #6B7080;">Cue 04 · Ask</div>
+        <h2 class="display" style="font-size: 68px; line-height: 0.98; font-weight: 700; letter-spacing: -2px; font-variation-settings: 'wdth' 88;">Ask about my work.</h2>
+        <p style="font-size: 18px; line-height: 1.6; color: #444954;">An AI assistant answers from notes I wrote myself. When the answer isn't in them, it tells you to ask me.</p>
+        <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 16px; font-weight: 600;">Or connect your own AI</div>
+          <p style="font-size: 15px; line-height: 1.55; color: #555A66;">My experience is also a read-only MCP server. Add it to Claude Code, Claude Desktop or Cursor.</p>
+          <div class="mono" style="padding: 18px 20px; background: #111318; color: #E2E4EA; border-radius: 8px; font-size: 13px; line-height: 1.6; white-space: nowrap; overflow: hidden;"><span style="color: #6B7080;">$</span> claude mcp add --transport http rene https://[YOUR-DOMAIN]/mcp</div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; background: #F8F9FB; border: 1px solid #D3D7DE; border-radius: 14px; overflow: hidden;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #E1E4EA;">
+          <span style="font-size: 15px; font-weight: 600;">Assistant</span>
+          <span class="mono" style="font-size: 12px; color: #6B7080;">AI · answers from Rene's notes</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 20px; padding: 28px 24px;">
+          <div style="align-self: flex-end; max-width: 70%; padding: 12px 16px; background: #1A1C22; color: #F3F4F7; border-radius: 12px; font-size: 16px; line-height: 1.5;">What has Rene shipped with MCP?</div>
+          <p style="max-width: 88%; font-size: 16px; line-height: 1.65; color: #2A2D35;">At Humana, Rene led a self-service platform that lets internal developers spin up MCP servers from any of the 4,000+ APIs in the company catalog, with governance approvals built in. It replaced a manual setup process entirely.</p>
+          <div class="mono" style="display: flex; flex-direction: column; gap: 8px; padding: 18px 20px; background: #111318; border-radius: 8px; font-size: 12.5px; line-height: 1.5; color: #A3A8B3;">
+            <div style="display: flex; justify-content: space-between; color: #6B7080; letter-spacing: 1.5px;"><span>SHOW YOUR WORK</span><span>sample</span></div>
+            <div style="display: flex; gap: 16px;"><span style="width: 72px; color: #F2A33A;">STANDBY</span><span>read facts.md › humana-mcp-platform</span></div>
+            <div style="display: flex; gap: 16px;"><span style="width: 72px; color: #F2A33A;">STANDBY</span><span>guardrails checked · 0 triggered</span></div>
+            <div style="display: flex; gap: 16px;"><span style="width: 72px; color: #F3F4F7;">GO</span><span>answered in 1.2s · 240 tokens · $0.0003</span></div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; margin: 0 24px 24px; height: 56px; padding: 0 8px 0 18px; background: #FFFFFF; border: 1px solid #C9CED6; border-radius: 10px;">
+          <span style="flex-grow: 1; font-size: 16px; color: #8A8F9C;">Ask a question</span>
+          <span style="display: flex; align-items: center; height: 40px; padding: 0 18px; background: #1A1C22; color: #F3F4F7; border-radius: 7px; font-weight: 600; font-size: 15px;">Ask</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUE 05 — CONTACT -->
+  <section class="dark" style="position: relative; overflow: hidden; background: #111318; color: #F3F4F7; padding: 150px 120px 56px;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 40% 60% at 50% 30%, rgba(242,163,58,0.14) 0%, rgba(17,19,24,0) 70%);"></div>
+    <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center;">
+      <div class="mono" style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #8A8F9C;">Cue 05 · Your call</div>
+      <h2 class="display" style="font-size: 120px; line-height: 0.92; font-weight: 700; letter-spacing: -3px; font-variation-settings: 'wdth' 88;">Your cue.</h2>
+      <p style="max-width: 520px; font-size: 19px; line-height: 1.55; color: #A3A8B3;">Hiring for AI or platform product work? I'd like to hear what you're building.</p>
+      <a href="#" style="display: flex; align-items: center; height: 56px; padding: 0 28px; background: #F2A33A; color: #111318; border-radius: 8px; font-size: 17px; font-weight: 600;">Message me on LinkedIn</a>
+    </div>
+    <div style="position: relative; margin-top: 140px; display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid #252831; font-size: 14px; color: #7E8390;">
+      <span>© 2026 Rene Marino · Orange County, CA</span>
+      <div style="display: flex; gap: 28px;">
+        <a href="#" style="color: #A3A8B3;">LinkedIn</a>
+        <a href="#" style="color: #A3A8B3;">GitHub</a>
+        <a href="#" style="color: #A3A8B3;">Privacy</a>
+        <a href="#" style="color: #A3A8B3;">How this site was built</a>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+</body>
+</html>

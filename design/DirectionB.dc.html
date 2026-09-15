@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wdth,wght@75..100,400..700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #0B1422; font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; color: #0B1422; -webkit-font-smoothing: antialiased; }
+    a { color: #3D56D6; text-decoration: none; } a:hover { color: #2B43B8; }
+    .dark a { color: #A9B8FF; } .dark a:hover { color: #CDD6FF; }
+    .serif { font-family: "Instrument Serif", Georgia, "Times New Roman", serif; font-weight: 400; }
+    .mono { font-family: "DM Mono", ui-monospace, Menlo, monospace; }
+    h1, h2, h3, p { margin: 0; text-wrap: pretty; }
+    @keyframes glow { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: none; } }
+    @keyframes rise { from { opacity: 0; transform: translateY(18px); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
+    .glow { animation: glow 2s ease-out both; }
+    .r1 { animation: rise 1s cubic-bezier(.2,.7,.1,1) .2s both; }
+    .r2 { animation: rise 1s cubic-bezier(.2,.7,.1,1) .5s both; }
+    .r3 { animation: rise 1s cubic-bezier(.2,.7,.1,1) .8s both; }
+    @media (prefers-reduced-motion: reduce) { .glow, .r1, .r2, .r3 { animation: none; } }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #0B1422;">
+  <section class="dark" style="position: relative; height: 900px; overflow: hidden; background: #0B1422; color: #EEF1F6;">
+    <div class="glow" style="position: absolute; left: 30%; top: -10%; width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(circle, rgba(123,147,255,0.26) 0%, rgba(123,147,255,0.08) 40%, rgba(11,20,34,0) 70%);"></div>
+    <div style="position: absolute; inset: 0; opacity: 0.35; background-image: radial-gradient(rgba(255,255,255,0.08) 1px, rgba(0,0,0,0) 1px); background-size: 3px 3px;"></div>
+
+    <nav style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 30px 88px;">
+      <div class="serif" style="font-size: 26px; letter-spacing: -0.2px;">Rene Marino</div>
+      <div style="display: flex; align-items: center; gap: 36px; font-size: 15px;">
+        <a href="#" style="color: #AEB7C6;">Work</a>
+        <a href="#" style="color: #AEB7C6;">About</a>
+        <a href="#" style="color: #AEB7C6;">Ask</a>
+        <a href="#" style="color: #AEB7C6;">Resume</a>
+        <a href="#" style="display: flex; align-items: center; height: 40px; padding: 0 20px; border: 1px solid #34405A; border-radius: 999px; color: #EEF1F6;">Contact</a>
+      </div>
+    </nav>
+
+    <div style="position: relative; display: flex; flex-direction: column; padding: 120px 88px 0;">
+      <div class="mono r1" style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #8C97AB;">Product Manager — AI &amp; API Platforms — Orange County, CA</div>
+      <h1 class="serif r2" style="margin-top: 30px; max-width: 1180px; font-size: 128px; line-height: 0.95; letter-spacing: -3px;">I build the platforms <span style="font-style: italic; color: #A9B8FF;">AI agents</span> run on.</h1>
+      <div class="r3" style="margin-top: 48px; display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 560px); gap: 96px; align-items: start;">
+        <p style="font-size: 19px; line-height: 1.6; color: #AEB7C6;">I lead product for self-service MCP infrastructure at Humana, turning 4,000+ internal APIs into tools AI agents can safely use. Before product, I was a full-stack engineer.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 8px; height: 58px; padding: 0 7px 0 24px; background: rgba(238,241,246,0.06); border: 1px solid #2C3850; border-radius: 999px;">
+            <span style="flex-grow: 1; font-size: 16px; color: #8C97AB;">Ask about my experience</span>
+            <span style="display: flex; align-items: center; height: 44px; padding: 0 22px; background: #EEF1F6; color: #0B1422; border-radius: 999px; font-weight: 600; font-size: 15px;">Ask</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; padding-left: 24px; font-size: 14px; color: #8C97AB;">
+            <span>What did Rene ship at Humana?</span><span style="color: #3A4660;">/</span><span>What roles is he open to?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #F2F4F7; padding: 130px 88px 140px;">
+    <div style="display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 64px; border-top: 1px solid #CDD3DC; padding-top: 28px;">
+      <span class="mono" style="font-size: 13px; letter-spacing: 1.5px; color: #5F6B7E;">SELECTED WORK</span>
+      <div style="display: flex; flex-direction: column; gap: 40px;">
+        <h2 class="serif" style="font-size: 88px; line-height: 0.98; letter-spacing: -2px;">Self-service MCP servers, <span style="font-style: italic; color: #3D56D6;">governed</span> by design.</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px;">
+          <p style="font-size: 18px; line-height: 1.7; color: #3E4A5C;">At Humana, developers used to wait on the platform team for every new MCP server. I led the product that moved that work into the enterprise API catalog, so teams can create, subscribe to and retire servers on their own.</p>
+          <p style="font-size: 18px; line-height: 1.7; color: #3E4A5C;">Security, architecture and governance approvals are part of the flow, not a separate queue. The result: <strong style="color: #0B1422;">4,000+ APIs</strong> available to agents, <strong style="color: #0B1422;">zero manual provisioning</strong>, delivered across three engineering teams.</p>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 24px; border-top: 1px solid #DCE0E7;">
+          <a href="#" style="font-size: 17px; font-weight: 600;">Read the case study →</a>
+          <span class="mono" style="font-size: 13px; color: #5F6B7E;">Humana · 2025–present</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+</body>
+</html>

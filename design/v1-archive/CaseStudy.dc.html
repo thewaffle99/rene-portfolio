@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #ECEEF1; font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; color: #1A1C22; -webkit-font-smoothing: antialiased; }
+    a { color: #3D5AFE; text-decoration: none; } a:hover { color: #2A45E0; }
+    .dark a { color: #F2A33A; } .dark a:hover { color: #FFC06B; }
+    .display { font-family: "Bricolage Grotesque", "Arial Narrow", sans-serif; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+    h1, h2, h3, p { margin: 0; text-wrap: pretty; }
+    .tbd { background: rgba(242,163,58,0.18); color: #8A5410; padding: 1px 6px; border-radius: 4px; font-family: "IBM Plex Mono", monospace; font-size: 0.85em; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #ECEEF1;">
+
+  <header class="dark" style="position: relative; overflow: hidden; background: #111318; color: #F3F4F7; padding: 28px 64px 88px;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 50% 70% at 20% 30%, rgba(242,163,58,0.13) 0%, rgba(17,19,24,0) 70%);"></div>
+    <nav style="position: relative; display: flex; align-items: center; justify-content: space-between;">
+      <div class="display" style="font-size: 20px; font-weight: 700; font-variation-settings: 'wdth' 85;">Rene Marino</div>
+      <div style="display: flex; align-items: center; gap: 36px; font-size: 15px;">
+        <a href="#" style="color: #F3F4F7;">Work</a>
+        <a href="#" style="color: #C5C8D0;">Ask</a>
+        <a href="#" style="color: #C5C8D0;">Resume</a>
+        <a href="#" style="display: flex; align-items: center; height: 40px; padding: 0 18px; border: 1px solid #3A3D47; border-radius: 6px; color: #F3F4F7;">Get in touch</a>
+      </div>
+    </nav>
+
+    <div style="position: relative; margin-top: 110px; padding: 0 56px; display: flex; flex-direction: column; gap: 28px;">
+      <div class="mono" style="display: flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #8A8F9C;">
+        <a href="#" style="color: #8A8F9C;">Work</a><span>/</span><span style="color: #F2A33A;">Humana</span>
+      </div>
+      <h1 class="display" style="max-width: 1080px; font-size: 104px; line-height: 0.94; font-weight: 700; letter-spacing: -3px; font-variation-settings: 'wdth' 86;">MCP servers on demand, for 4,000+ APIs</h1>
+      <p style="max-width: 720px; font-size: 21px; line-height: 1.55; color: #B7BBC5;">How we turned a ticket queue into a self-service button, without giving AI agents a free pass to every internal API.</p>
+
+      <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; padding-top: 28px; border-top: 1px solid #2A2D36;">
+        <div style="display: flex; flex-direction: column; gap: 6px;"><span class="mono" style="font-size: 12px; letter-spacing: 1.5px; color: #6B7080;">ROLE</span><span style="font-size: 17px;">Product manager</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;"><span class="mono" style="font-size: 12px; letter-spacing: 1.5px; color: #6B7080;">TEAM</span><span style="font-size: 17px;">3 teams · ~12 engineers</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;"><span class="mono" style="font-size: 12px; letter-spacing: 1.5px; color: #6B7080;">WHEN</span><span style="font-size: 17px;">2025–now</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;"><span class="mono" style="font-size: 12px; letter-spacing: 1.5px; color: #6B7080;">PARTNERS</span><span style="font-size: 17px;">Architecture, security, governance</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div style="position: relative; display: flex; justify-content: center; margin-top: -28px;">
+    <div style="display: flex; gap: 4px; padding: 5px; background: #FFFFFF; border: 1px solid #D3D7DE; border-radius: 10px; box-shadow: 0 8px 24px rgba(17,19,24,0.10);">
+      <span style="display: flex; align-items: center; height: 44px; padding: 0 26px; background: #1A1C22; color: #F3F4F7; border-radius: 7px; font-size: 15px; font-weight: 600;">The product call</span>
+      <span style="display: flex; align-items: center; height: 44px; padding: 0 26px; color: #555A66; border-radius: 7px; font-size: 15px; font-weight: 500;">How it was built</span>
+    </div>
+  </div>
+
+  <main style="display: grid; grid-template-columns: 240px minmax(0, 760px); gap: 120px; justify-content: center; padding: 96px 120px 120px;">
+    <aside class="mono" style="display: flex; flex-direction: column; gap: 14px; padding-top: 8px; font-size: 13px; letter-spacing: 1px; color: #8A8F9C;">
+      <span style="color: #1A1C22; display: flex; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F2A33A;"></span>PROBLEM</span>
+      <span style="padding-left: 18px;">OPTIONS</span>
+      <span style="padding-left: 18px;">DECISION</span>
+      <span style="padding-left: 18px;">NOT BUILT</span>
+      <span style="padding-left: 18px;">RESULT</span>
+      <span style="padding-left: 18px;">LESSON</span>
+    </aside>
+
+    <article style="display: flex; flex-direction: column; gap: 88px;">
+      <section style="display: flex; flex-direction: column; gap: 20px;">
+        <h2 class="display" style="font-size: 44px; line-height: 1.05; font-weight: 700; letter-spacing: -1px; font-variation-settings: 'wdth' 88;">The queue was the bottleneck</h2>
+        <p style="font-size: 19px; line-height: 1.7; color: #3A3E48;">Every new MCP server meant a request to the platform team and a wait. As more teams started building AI agents, the requests piled up faster than one team could handle them. <span class="tbd">[confirm: volume / wait time]</span></p>
+      </section>
+
+      <section style="display: flex; flex-direction: column; gap: 24px;">
+        <h2 class="display" style="font-size: 44px; line-height: 1.05; font-weight: 700; letter-spacing: -1px; font-variation-settings: 'wdth' 88;">Three ways to fix it</h2>
+        <div style="display: flex; flex-direction: column; border-top: 1px solid #C9CED6;">
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 24px; align-items: start; padding: 24px 0; border-bottom: 1px solid #D3D7DE;">
+            <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 18px; font-weight: 600;">Keep setting servers up by hand, add people</span><span style="font-size: 16px; line-height: 1.6; color: #555A66;">Cost grows with every request. The queue comes back.</span></div>
+            <span class="mono" style="justify-self: end; font-size: 12px; letter-spacing: 1px; color: #8A8F9C;">REJECTED</span>
+          </div>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 24px; align-items: start; padding: 24px 0; border-bottom: 1px solid #D3D7DE;">
+            <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 18px; font-weight: 600;">Let each team host its own servers</span><span style="font-size: 16px; line-height: 1.6; color: #555A66;">Fast, but no central control over which APIs agents can reach.</span></div>
+            <span class="mono" style="justify-self: end; font-size: 12px; letter-spacing: 1px; color: #8A8F9C;">REJECTED</span>
+          </div>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 24px; align-items: start; padding: 24px 0; border-bottom: 1px solid #D3D7DE;">
+            <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 18px; font-weight: 600;">Self-service inside the API catalog, with approvals built in</span><span style="font-size: 16px; line-height: 1.6; color: #555A66;">Developers get speed. Security keeps the gate.</span></div>
+            <span class="mono" style="justify-self: end; display: flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 1px; color: #1A1C22; font-weight: 500;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F2A33A;"></span>CHOSEN</span>
+          </div>
+        </div>
+        <p class="mono" style="font-size: 12px; color: #8A5410;">[draft options, confirm in interview]</p>
+      </section>
+
+      <section style="display: flex; flex-direction: column; gap: 20px;">
+        <h2 class="display" style="font-size: 44px; line-height: 1.05; font-weight: 700; letter-spacing: -1px; font-variation-settings: 'wdth' 88;">What we left out of v1</h2>
+        <p style="font-size: 19px; line-height: 1.7; color: #3A3E48;"><span class="tbd">[from interview: what was cut, and why]</span></p>
+      </section>
+
+      <section style="display: flex; flex-direction: column; gap: 28px;">
+        <h2 class="display" style="font-size: 44px; line-height: 1.05; font-weight: 700; letter-spacing: -1px; font-variation-settings: 'wdth' 88;">Result</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 28px; background: #FFFFFF; border: 1px solid #D3D7DE; border-radius: 10px;">
+            <span class="display" style="font-size: 56px; line-height: 1; font-weight: 700; letter-spacing: -1.5px;">100%</span>
+            <span style="font-size: 16px; line-height: 1.5; color: #555A66;">of manual MCP server setup replaced by self-service</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 28px; background: #FFFFFF; border: 1px solid #D3D7DE; border-radius: 10px;">
+            <span class="display" style="font-size: 56px; line-height: 1; font-weight: 700; letter-spacing: -1.5px;">Early</span>
+            <span style="font-size: 16px; line-height: 1.5; color: #555A66;">shipped ahead of comparable features from major API management vendors <span class="tbd">[employer OK?]</span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark" style="display: flex; flex-direction: column; gap: 28px; padding: 48px; background: #111318; color: #F3F4F7; border-radius: 14px;">
+        <div class="mono" style="font-size: 13px; letter-spacing: 2px; color: #8A8F9C;">HOW IT WAS BUILT</div>
+        <h2 class="display" style="font-size: 40px; line-height: 1.05; font-weight: 700; letter-spacing: -1px; font-variation-settings: 'wdth' 88;">The gate is part of the button</h2>
+        <svg viewBox="0 0 664 170" width="100%" style="display: block;" fill="none">
+          <rect x="1" y="45" width="150" height="80" rx="8" stroke="#3A3D47" stroke-width="1.5"></rect>
+          <text x="20" y="80" fill="#F3F4F7" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600">Developer</text>
+          <text x="20" y="102" fill="#8A8F9C" font-family="IBM Plex Mono, monospace" font-size="11">catalog UI</text>
+          <path d="M151 85 H215" stroke="#F2A33A" stroke-width="2"></path>
+          <rect x="215" y="45" width="150" height="80" rx="8" stroke="#3A3D47" stroke-width="1.5"></rect>
+          <text x="234" y="80" fill="#F3F4F7" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600">Create server</text>
+          <text x="234" y="102" fill="#8A8F9C" font-family="IBM Plex Mono, monospace" font-size="11">pick APIs</text>
+          <path d="M365 85 H415" stroke="#F2A33A" stroke-width="2"></path>
+          <rect x="415" y="53" width="96" height="64" rx="32" stroke="#F2A33A" stroke-width="1.5"></rect>
+          <text x="463" y="90" text-anchor="middle" fill="#F2A33A" font-family="IBM Plex Mono, monospace" font-size="11">APPROVAL</text>
+          <path d="M511 85 H555" stroke="#F2A33A" stroke-width="2"></path>
+          <rect x="555" y="45" width="108" height="80" rx="8" stroke="#F2A33A" stroke-width="1.5" fill="rgba(242,163,58,0.06)"></rect>
+          <text x="572" y="80" fill="#F3F4F7" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600">Live</text>
+          <text x="572" y="102" fill="#F2A33A" font-family="IBM Plex Mono, monospace" font-size="11">MCP server</text>
+        </svg>
+        <p style="font-size: 17px; line-height: 1.65; color: #B7BBC5;">Architecture detail, key tradeoffs and the governance model go here, at whatever depth your employer allows. <span style="color: #F2A33A; font-family: 'IBM Plex Mono', monospace; font-size: 14px;">[from interview]</span></p>
+      </section>
+
+      <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-top: 1px solid #C9CED6; color: #1A1C22;">
+        <span style="display: flex; flex-direction: column; gap: 6px;"><span class="mono" style="font-size: 12px; letter-spacing: 1.5px; color: #8A8F9C;">NEXT CUE</span><span class="display" style="font-size: 32px; font-weight: 700; letter-spacing: -0.6px;">Web Builder: an AI crew that ships websites</span></span>
+        <span style="font-size: 28px; color: #3D5AFE;">→</span>
+      </a>
+    </article>
+  </main>
+</div>
+</x-dc>
+</body>
+</html>

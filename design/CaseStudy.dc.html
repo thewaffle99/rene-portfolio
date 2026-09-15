@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Martian+Mono:wdth,wght@75..112,400..500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #F5F6F8; font-family: "Funnel Sans", "Helvetica Neue", Arial, sans-serif; color: #0A0A0C; -webkit-font-smoothing: antialiased; }
+    a { color: #2B3BFF; text-decoration: none; } a:hover { color: #1B28D6; }
+    .onblue a { color: #FFFFFF; } .onblack a { color: #9AA3FF; }
+    .display { font-family: "Funnel Display", "Arial Black", sans-serif; }
+    .mono { font-family: "Martian Mono", ui-monospace, Menlo, monospace; font-variation-settings: "wdth" 85; }
+    h1, h2, h3, p { margin: 0; text-wrap: pretty; }
+    .tbd { background: #DCE3FF; color: #1B28D6; padding: 1px 6px; border-radius: 4px; font-family: "Martian Mono", monospace; font-size: 0.72em; }
+    @keyframes maskUp { from { transform: translateY(105%); } to { transform: none; } }
+    .line { display: block; overflow: hidden; padding-bottom: 0.04em; }
+    .line > span { display: block; animation: maskUp 1s cubic-bezier(.7,0,.2,1) both; }
+    .l2 > span { animation-delay: .12s; } .l3 > span { animation-delay: .24s; }
+    @media (prefers-reduced-motion: reduce) { .line > span { animation: none; } }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #F5F6F8;">
+  <header style="padding: 28px 64px 0;">
+    <nav style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="mono" style="font-size: 13px; font-weight: 500;">RENE MARINO</div>
+      <div style="display: flex; align-items: center; gap: 30px; font-size: 15px;">
+        <a href="#" style="color: #0A0A0C; font-weight: 600;">Work</a>
+        <a href="#" style="color: #4A4E5C;">About</a>
+        <a href="#" style="color: #4A4E5C;">Ask</a>
+        <a href="#" style="color: #4A4E5C;">Resume</a>
+        <a href="#" style="display: flex; align-items: center; height: 40px; padding: 0 18px; background: #2B3BFF; color: #FFFFFF; border-radius: 10px; font-weight: 600;">Contact</a>
+      </div>
+    </nav>
+
+    <div style="margin-top: 110px; display: flex; flex-direction: column; gap: 36px;">
+      <div class="mono" style="display: flex; gap: 12px; font-size: 12px; color: #55596A;"><a href="#" style="color: #55596A;">WORK</a><span>/</span><span style="color: #2B3BFF;">HUMANA</span></div>
+      <h1 class="display" style="font-size: 100px; line-height: 0.9; font-weight: 800; letter-spacing: -4.5px;">
+        <span class="line"><span>Self-service MCP servers,</span></span>
+        <span class="line l2"><span><span style="color: #2B3BFF;">governed</span> by design.</span></span>
+      </h1>
+      <div style="display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: 64px; align-items: end;">
+        <p style="font-size: 22px; line-height: 1.5; color: #2A2D36;">How we moved MCP server provisioning into the enterprise API catalog without giving AI agents unchecked access to internal APIs.</p>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-top: 22px; border-top: 2px solid #0A0A0C;">
+          <div style="display: flex; flex-direction: column; gap: 8px;"><span class="mono" style="font-size: 11px; color: #55596A;">ROLE</span><span style="font-size: 16px;">Product Manager</span></div>
+          <div style="display: flex; flex-direction: column; gap: 8px;"><span class="mono" style="font-size: 11px; color: #55596A;">TEAM</span><span style="font-size: 16px;">3 teams, ~12 engineers</span></div>
+          <div style="display: flex; flex-direction: column; gap: 8px;"><span class="mono" style="font-size: 11px; color: #55596A;">TIMELINE</span><span style="font-size: 16px;">2025–present</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div style="margin-top: 88px; display: flex; justify-content: flex-start; padding: 0 64px;">
+    <div style="display: flex; gap: 4px; padding: 5px; background: #0A0A0C; border-radius: 14px;">
+      <span style="display: flex; align-items: center; height: 46px; padding: 0 24px; background: #2B3BFF; color: #FFFFFF; border-radius: 10px; font-size: 15px; font-weight: 600;">The product decision</span>
+      <span style="display: flex; align-items: center; height: 46px; padding: 0 24px; color: #B4B7C4; border-radius: 10px; font-size: 15px; font-weight: 500;">How it was built</span>
+    </div>
+  </div>
+
+  <main style="padding: 72px 64px 120px; display: flex; flex-direction: column; gap: 100px;">
+    <section style="display: grid; grid-template-columns: 300px minmax(0, 820px); gap: 96px; align-items: start;">
+      <span class="mono" style="font-size: 12px; color: #55596A; padding-top: 14px;">THE PROBLEM</span>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <h2 class="display" style="font-size: 52px; line-height: 1; font-weight: 700; letter-spacing: -1.8px;">Provisioning was a queue, and AI adoption was making it longer.</h2>
+        <p style="font-size: 19px; line-height: 1.7; color: #3A3E4A;">Every new MCP server required a request to the platform team. As more teams built AI agents, demand grew faster than a single team could handle. <span class="tbd">[CONFIRM VOLUME / WAIT TIME]</span></p>
+      </div>
+    </section>
+
+    <section style="display: grid; grid-template-columns: 300px minmax(0, 820px); gap: 96px; align-items: start;">
+      <span class="mono" style="font-size: 12px; color: #55596A; padding-top: 14px;">OPTIONS CONSIDERED</span>
+      <div style="display: flex; flex-direction: column; border-top: 2px solid #0A0A0C;">
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 130px; gap: 24px; padding: 28px 0; border-bottom: 1px solid #D9DBE2;">
+          <div style="display: flex; flex-direction: column; gap: 6px;"><span class="display" style="font-size: 26px; font-weight: 600; letter-spacing: -0.5px;">Scale the manual process</span><span style="font-size: 16px; line-height: 1.6; color: #55596A;">Cost grows with every request, and the queue returns.</span></div>
+          <span class="mono" style="justify-self: end; font-size: 11px; color: #8A8E9C; padding-top: 8px;">REJECTED</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 130px; gap: 24px; padding: 28px 0; border-bottom: 1px solid #D9DBE2;">
+          <div style="display: flex; flex-direction: column; gap: 6px;"><span class="display" style="font-size: 26px; font-weight: 600; letter-spacing: -0.5px;">Let teams host their own servers</span><span style="font-size: 16px; line-height: 1.6; color: #55596A;">Fast, but no central control over which APIs agents can reach.</span></div>
+          <span class="mono" style="justify-self: end; font-size: 11px; color: #8A8E9C; padding-top: 8px;">REJECTED</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 130px; gap: 24px; padding: 28px 0; border-bottom: 1px solid #D9DBE2;">
+          <div style="display: flex; flex-direction: column; gap: 6px;"><span class="display" style="font-size: 26px; font-weight: 600; letter-spacing: -0.5px;">Self-service in the API catalog, approvals built in</span><span style="font-size: 16px; line-height: 1.6; color: #55596A;">Developers get speed; security and governance keep control.</span></div>
+          <span class="mono" style="justify-self: end; display: flex; align-items: center; gap: 8px; height: 28px; padding: 0 12px; background: #2B3BFF; color: #FFFFFF; border-radius: 999px; font-size: 11px;">CHOSEN</span>
+        </div>
+        <span class="tbd" style="margin-top: 16px; align-self: flex-start;">[DRAFT OPTIONS · CONFIRM IN INTERVIEW]</span>
+      </div>
+    </section>
+
+    <section style="display: grid; grid-template-columns: 300px minmax(0, 820px); gap: 96px; align-items: start;">
+      <span class="mono" style="font-size: 12px; color: #55596A; padding-top: 14px;">WHAT WE LEFT OUT</span>
+      <p style="font-size: 19px; line-height: 1.7; color: #3A3E4A;"><span class="tbd">[FROM INTERVIEW: WHAT WAS CUT FROM V1, AND WHY]</span></p>
+    </section>
+
+    <section class="onblue" style="position: relative; overflow: hidden; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 96px; padding: 72px 64px; margin: 0 -64px; background: #2B3BFF; color: #FFFFFF;">
+      <span class="mono" style="font-size: 12px; color: #DCE3FF; padding-top: 14px;">RESULT</span>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;"><span class="display" style="font-size: 76px; line-height: 0.9; font-weight: 800; letter-spacing: -3px;">4,000+</span><span style="font-size: 16px; line-height: 1.5; color: #E4E8FF;">internal APIs available as MCP tools</span></div>
+        <div style="display: flex; flex-direction: column; gap: 10px;"><span class="display" style="font-size: 76px; line-height: 0.9; font-weight: 800; letter-spacing: -3px;">100%</span><span style="font-size: 16px; line-height: 1.5; color: #E4E8FF;">of manual provisioning replaced by self-service</span></div>
+        <div style="display: flex; flex-direction: column; gap: 10px;"><span class="display" style="font-size: 76px; line-height: 0.9; font-weight: 800; letter-spacing: -3px;">Early</span><span style="font-size: 16px; line-height: 1.5; color: #E4E8FF;">shipped ahead of comparable vendor features <span style="font-family: 'Martian Mono', monospace; font-size: 11px; background: rgba(255,255,255,0.18); padding: 1px 6px; border-radius: 4px;">[EMPLOYER OK?]</span></span></div>
+      </div>
+    </section>
+
+    <section class="onblack" style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 96px; padding: 80px 64px; margin: -100px -64px 0; background: #0A0A0C; color: #F5F6F8;">
+      <span class="mono" style="font-size: 12px; color: #8C8FA0; padding-top: 14px;">HOW IT WAS BUILT</span>
+      <div style="display: flex; flex-direction: column; gap: 32px;">
+        <h2 class="display" style="font-size: 52px; line-height: 1; font-weight: 700; letter-spacing: -1.8px;">Approval is a step in the flow, not a separate queue.</h2>
+        <svg viewBox="0 0 860 150" width="100%" style="display: block;" fill="none">
+          <g font-family="Martian Mono, monospace" font-size="12">
+            <rect x="1" y="35" width="180" height="80" rx="12" stroke="#34363F" stroke-width="1.5"></rect>
+            <text x="22" y="70" fill="#F5F6F8" font-family="Funnel Sans, sans-serif" font-size="17" font-weight="600">Developer</text>
+            <text x="22" y="94" fill="#8C8FA0">catalog UI</text>
+            <path d="M181 75 H241" stroke="#7C88FF" stroke-width="2"></path>
+            <rect x="241" y="35" width="180" height="80" rx="12" stroke="#34363F" stroke-width="1.5"></rect>
+            <text x="262" y="70" fill="#F5F6F8" font-family="Funnel Sans, sans-serif" font-size="17" font-weight="600">Select APIs</text>
+            <text x="262" y="94" fill="#8C8FA0">create server</text>
+            <path d="M421 75 H481" stroke="#7C88FF" stroke-width="2"></path>
+            <rect x="481" y="35" width="160" height="80" rx="40" fill="#2B3BFF"></rect>
+            <text x="561" y="80" text-anchor="middle" fill="#FFFFFF">APPROVAL</text>
+            <path d="M641 75 H701" stroke="#7C88FF" stroke-width="2"></path>
+            <rect x="701" y="35" width="158" height="80" rx="12" stroke="#7C88FF" stroke-width="1.5"></rect>
+            <text x="722" y="70" fill="#F5F6F8" font-family="Funnel Sans, sans-serif" font-size="17" font-weight="600">Live server</text>
+            <text x="722" y="94" fill="#9AA3FF">ready for agents</text>
+          </g>
+        </svg>
+        <p style="font-size: 18px; line-height: 1.7; color: #B4B7C4;">Architecture, key tradeoffs and the governance model go here, at whatever level of detail Humana allows. <span style="font-family: 'Martian Mono', monospace; font-size: 11px; background: rgba(124,136,255,0.2); color: #C7CCFF; padding: 1px 6px; border-radius: 4px;">[FROM INTERVIEW]</span></p>
+      </div>
+    </section>
+
+    <a href="#" style="display: grid; grid-template-columns: 300px minmax(0, 1fr) 40px; gap: 96px; align-items: center; padding-top: 12px; color: #0A0A0C;">
+      <span class="mono" style="font-size: 12px; color: #55596A;">NEXT PROJECT</span>
+      <span class="display" style="font-size: 72px; line-height: 1; font-weight: 700; letter-spacing: -2.8px;">Web Builder</span>
+      <span style="font-size: 34px; color: #2B3BFF;">→</span>
+    </a>
+  </main>
+</div>
+</x-dc>
+</body>
+</html>

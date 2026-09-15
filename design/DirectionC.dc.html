@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Martian+Mono:wdth,wght@75..112,400..500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #F5F6F8; font-family: "Funnel Sans", "Helvetica Neue", Arial, sans-serif; color: #0A0A0C; -webkit-font-smoothing: antialiased; }
+    a { color: #2B3BFF; text-decoration: none; } a:hover { color: #1B28D6; }
+    .blue a { color: #FFFFFF; }
+    .display { font-family: "Funnel Display", "Arial Black", sans-serif; }
+    .mono { font-family: "Martian Mono", ui-monospace, Menlo, monospace; font-variation-settings: "wdth" 85; }
+    h1, h2, h3, p { margin: 0; text-wrap: pretty; }
+    @keyframes maskUp { from { transform: translateY(105%); } to { transform: none; } }
+    @keyframes wipe { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0 0 0 0); } }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    .line { display: block; overflow: hidden; }
+    .line span { display: block; animation: maskUp 1s cubic-bezier(.7,0,.2,1) both; }
+    .l2 span { animation-delay: .12s; }
+    .panel { animation: wipe 1.1s cubic-bezier(.7,0,.2,1) .5s both; }
+    .f { animation: fade .8s ease-out 1.3s both; }
+    @media (prefers-reduced-motion: reduce) { .line span, .panel, .f { animation: none; } }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #F5F6F8;">
+  <section style="position: relative; height: 900px; overflow: hidden; background: #F5F6F8;">
+    <div class="panel blue" style="position: absolute; top: 0; right: 0; bottom: 0; width: 520px; background: #2B3BFF; color: #FFFFFF;">
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 90% 60% at 70% 20%, rgba(255,255,255,0.18) 0%, rgba(43,59,255,0) 70%);"></div>
+      <div class="f" style="position: absolute; left: 56px; right: 56px; bottom: 64px; display: flex; flex-direction: column; gap: 18px;">
+        <span class="mono" style="font-size: 12px; letter-spacing: 1px; color: #DCE3FF;">ASK ABOUT MY EXPERIENCE</span>
+        <p style="font-size: 22px; line-height: 1.4; color: #FFFFFF;">An AI assistant that answers from my own notes, and says so when it doesn't know.</p>
+        <div style="display: flex; align-items: center; gap: 8px; height: 58px; padding: 0 7px 0 20px; background: #FFFFFF; border-radius: 12px;">
+          <span style="flex-grow: 1; font-size: 16px; color: #6A6F80;">What did Rene ship at Humana?</span>
+          <span style="display: flex; align-items: center; height: 44px; padding: 0 20px; background: #0A0A0C; color: #FFFFFF; border-radius: 8px; font-weight: 600; font-size: 15px;">Ask</span>
+        </div>
+      </div>
+    </div>
+
+    <nav style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 28px 64px;">
+      <div class="mono" style="font-size: 13px; font-weight: 500;">RENE MARINO</div>
+      <div style="display: flex; align-items: center; gap: 32px; font-size: 15px;">
+        <a href="#" style="color: #DCE3FF;">Work</a>
+        <a href="#" style="color: #DCE3FF;">About</a>
+        <a href="#" style="color: #DCE3FF;">Resume</a>
+        <a href="#" style="color: #FFFFFF; font-weight: 600;">Contact</a>
+      </div>
+    </nav>
+
+    <div style="position: relative; padding: 96px 0 0 56px;">
+      <h1 class="display" style="font-size: 236px; line-height: 0.84; font-weight: 800; letter-spacing: -11px; color: #0A0A0C;">
+        <span class="line"><span>Rene</span></span>
+        <span class="line l2"><span>Marino</span></span>
+      </h1>
+      <div class="f" style="margin-top: 56px; margin-left: 8px; display: grid; grid-template-columns: 180px 560px; gap: 40px;">
+        <span class="mono" style="font-size: 12px; line-height: 1.7; color: #55596A;">PRODUCT MANAGER<br>AI &amp; API PLATFORMS</span>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <p class="display" style="font-size: 34px; line-height: 1.12; font-weight: 600; letter-spacing: -0.8px;">I build the platforms AI agents run on.</p>
+          <p style="font-size: 18px; line-height: 1.6; color: #4A4E5C;">Product lead for self-service MCP infrastructure at Humana. Former full-stack engineer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #0A0A0C; color: #F5F6F8; padding: 120px 64px 130px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 28px; border-bottom: 1px solid #26272E;">
+      <span class="mono" style="font-size: 12px; color: #8C8FA0;">SELECTED WORK</span>
+      <span class="mono" style="font-size: 12px; color: #8C8FA0;">HUMANA · 2025–PRESENT</span>
+    </div>
+    <div style="margin-top: 56px; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 72px; align-items: end;">
+      <h2 class="display" style="font-size: 92px; line-height: 0.92; font-weight: 700; letter-spacing: -3.5px;">MCP servers on demand for <span style="color: #7C88FF;">4,000+</span> APIs.</h2>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <p style="font-size: 18px; line-height: 1.65; color: #B4B7C4;">Replaced manual provisioning with a governed, self-service workflow in the enterprise API catalog, delivered across three engineering teams.</p>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 24px; background: #2B3BFF; color: #FFFFFF; border-radius: 12px; font-size: 17px; font-weight: 600;"><span>Read the case study</span><span>→</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+</body>
+</html>

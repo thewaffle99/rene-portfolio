@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #0D0F12; font-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif; color: #0D0F12; -webkit-font-smoothing: antialiased; }
+    a { color: #3E63F2; text-decoration: none; } a:hover { color: #2C4FD8; }
+    .dark a { color: #9FB4FF; } .dark a:hover { color: #C4D1FF; }
+    .display { font-family: "Archivo", "Arial Black", sans-serif; font-variation-settings: "wdth" 118; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; }
+    h1, h2, h3, p { margin: 0; text-wrap: pretty; }
+    @keyframes lightIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes draw { from { stroke-dashoffset: 420; } to { stroke-dashoffset: 0; } }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    @keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+    .light { animation: lightIn 1.8s ease-out both; }
+    .r1 { animation: rise .8s cubic-bezier(.2,.7,.1,1) .2s both; }
+    .r2 { animation: rise .8s cubic-bezier(.2,.7,.1,1) .45s both; }
+    .r3 { animation: rise .8s cubic-bezier(.2,.7,.1,1) .7s both; }
+    .wire { stroke-dasharray: 420; animation: draw 1.6s cubic-bezier(.4,0,.2,1) .9s both; }
+    .node { animation: pulse 2.4s ease-in-out 2.5s infinite; }
+    @media (prefers-reduced-motion: reduce) { .light, .r1, .r2, .r3, .wire, .node { animation: none; } }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #0D0F12;">
+  <section class="dark" style="position: relative; height: 900px; overflow: hidden; background: #0D0F12; color: #F4F5F7;">
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.045) 1px, rgba(0,0,0,0) 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, rgba(0,0,0,0) 1px); background-size: 80px 80px; -webkit-mask-image: radial-gradient(ellipse 70% 70% at 60% 45%, #000 20%, rgba(0,0,0,0) 80%); mask-image: radial-gradient(ellipse 70% 70% at 60% 45%, #000 20%, rgba(0,0,0,0) 80%);"></div>
+    <div class="light" style="position: absolute; inset: 0; background: radial-gradient(ellipse 45% 55% at 74% 42%, rgba(62,99,242,0.30) 0%, rgba(62,99,242,0.08) 45%, rgba(13,15,18,0) 72%);"></div>
+
+    <nav style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 28px 80px;">
+      <div class="display" style="font-size: 18px; font-weight: 800; letter-spacing: -0.2px;">Rene Marino</div>
+      <div style="display: flex; align-items: center; gap: 36px; font-size: 15px;">
+        <a href="#" style="color: #B3B8C4;">Work</a>
+        <a href="#" style="color: #B3B8C4;">About</a>
+        <a href="#" style="color: #B3B8C4;">Ask</a>
+        <a href="#" style="color: #B3B8C4;">Resume</a>
+        <a href="#" style="display: flex; align-items: center; height: 40px; padding: 0 18px; background: #F4F5F7; color: #0D0F12; border-radius: 4px; font-weight: 600;">Contact</a>
+      </div>
+    </nav>
+
+    <div style="position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 40px; align-items: center; padding: 96px 80px 0;">
+      <div style="display: flex; flex-direction: column;">
+        <div class="mono r1" style="display: flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #9FB4FF;">
+          <span style="width: 8px; height: 8px; background: #3E63F2;"></span>
+          <span>Product Manager · AI &amp; API Platforms</span>
+        </div>
+        <h1 class="display r2" style="margin-top: 28px; font-size: 76px; line-height: 0.98; font-weight: 800; letter-spacing: -2.2px;">I build the platforms AI agents run on.</h1>
+        <p class="r3" style="margin-top: 28px; max-width: 620px; font-size: 19px; line-height: 1.6; color: #A9AFBC;">I lead product for self-service MCP infrastructure at Humana, turning 4,000+ internal APIs into tools AI agents can safely use. Before product, I was a full-stack engineer.</p>
+        <div class="r3" style="margin-top: 40px; display: flex; flex-direction: column; gap: 12px; width: 620px;">
+          <div style="display: flex; align-items: center; gap: 8px; height: 58px; padding: 0 7px 0 20px; background: rgba(255,255,255,0.04); border: 1px solid #2B2F38; border-radius: 6px;">
+            <span class="mono" style="color: #3E63F2; font-size: 15px;">&gt;</span>
+            <span style="flex-grow: 1; font-size: 16px; color: #7D8391;">Ask about my experience</span>
+            <span style="display: flex; align-items: center; height: 44px; padding: 0 20px; background: #3E63F2; color: #FFFFFF; border-radius: 4px; font-weight: 600; font-size: 15px;">Ask</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="padding: 6px 12px; border: 1px solid #262A33; border-radius: 4px; font-size: 14px; color: #9AA0AD;">What did Rene ship at Humana?</span>
+            <span style="padding: 6px 12px; border: 1px solid #262A33; border-radius: 4px; font-size: 14px; color: #9AA0AD;">How does he work with engineers?</span>
+            <span style="padding: 6px 12px; border: 1px solid #262A33; border-radius: 4px; font-size: 14px; color: #9AA0AD;">What roles is he open to?</span>
+          </div>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 480 520" width="100%" style="display: block;" fill="none">
+        <g font-family="JetBrains Mono, monospace" font-size="11">
+          <rect x="4" y="60" width="130" height="44" rx="4" stroke="#2F3440" stroke-width="1.2"></rect><text x="20" y="87" fill="#8A90A0">GET /members</text>
+          <rect x="4" y="130" width="130" height="44" rx="4" stroke="#2F3440" stroke-width="1.2"></rect><text x="20" y="157" fill="#8A90A0">GET /providers</text>
+          <rect x="4" y="200" width="130" height="44" rx="4" stroke="#3E63F2" stroke-width="1.2"></rect><text x="20" y="227" fill="#C4D1FF">GET /claims</text>
+          <rect x="4" y="270" width="130" height="44" rx="4" stroke="#2F3440" stroke-width="1.2"></rect><text x="20" y="297" fill="#8A90A0">POST /auth</text>
+          <text x="4" y="350" fill="#5C6272">+ 3,996 more APIs</text>
+
+          <path class="wire" d="M134 82 C 180 82, 180 222, 224 222" stroke="#2F3440" stroke-width="1.2"></path>
+          <path class="wire" d="M134 152 C 180 152, 180 222, 224 222" stroke="#2F3440" stroke-width="1.2"></path>
+          <path class="wire" d="M134 222 H 224" stroke="#3E63F2" stroke-width="2"></path>
+          <path class="wire" d="M134 292 C 180 292, 180 222, 224 222" stroke="#2F3440" stroke-width="1.2"></path>
+
+          <rect x="224" y="186" width="104" height="72" rx="4" stroke="#3E63F2" stroke-width="1.5" fill="rgba(62,99,242,0.10)"></rect>
+          <text x="238" y="214" fill="#9FB4FF" letter-spacing="1">POLICY</text>
+          <text x="238" y="236" fill="#F4F5F7">approved</text>
+
+          <path class="wire" d="M328 222 H 360" stroke="#3E63F2" stroke-width="2"></path>
+          <circle class="node" cx="400" cy="222" r="40" stroke="#3E63F2" stroke-width="1.5" fill="rgba(62,99,242,0.16)"></circle>
+          <text x="400" y="218" text-anchor="middle" fill="#F4F5F7" font-size="13" font-weight="500">MCP</text>
+          <text x="400" y="236" text-anchor="middle" fill="#9FB4FF">server</text>
+
+          <path class="wire" d="M400 262 V 380" stroke="#2F3440" stroke-width="1.2"></path>
+          <rect x="336" y="380" width="128" height="52" rx="4" stroke="#2F3440" stroke-width="1.2"></rect>
+          <text x="352" y="411" fill="#C8CCD6">AI agent</text>
+          <text x="4" y="500" fill="#5C6272">self-service · governed · no ticket</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section style="position: relative; background: #F4F5F7; padding: 120px 80px 130px;">
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(13,15,18,0.045) 1px, rgba(0,0,0,0) 1px), linear-gradient(90deg, rgba(13,15,18,0.045) 1px, rgba(0,0,0,0) 1px); background-size: 80px 80px;"></div>
+    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <span class="mono" style="font-size: 13px; letter-spacing: 1.5px; color: #5E6472;">SELECTED WORK</span>
+        <h2 class="display" style="font-size: 60px; line-height: 1; font-weight: 800; letter-spacing: -1.8px;">Shipped, measured, explained.</h2>
+      </div>
+      <span class="mono" style="font-size: 13px; color: #5E6472;">1 / 3</span>
+    </div>
+    <div style="position: relative; margin-top: 56px; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); background: #FFFFFF; border: 1px solid #D8DCE3; border-radius: 6px;">
+      <div style="display: flex; flex-direction: column; gap: 22px; padding: 56px; border-right: 1px solid #E3E6EB;">
+        <span class="mono" style="font-size: 12px; letter-spacing: 1.5px; color: #3E63F2;">HUMANA · 2025–PRESENT</span>
+        <h3 class="display" style="font-size: 42px; line-height: 1.04; font-weight: 800; letter-spacing: -1.2px;">Self-service MCP servers across 4,000+ APIs</h3>
+        <p style="font-size: 17px; line-height: 1.65; color: #4A505C;">Replaced a manual provisioning process with a governed, self-service workflow inside the enterprise API catalog. Developers create, subscribe to and retire MCP servers without waiting on the platform team.</p>
+        <a href="#" style="margin-top: 8px; font-size: 16px; font-weight: 600;">Read the case study →</a>
+      </div>
+      <div style="display: grid; grid-template-rows: repeat(3, minmax(0, 1fr));">
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 0 48px; border-bottom: 1px solid #E3E6EB;"><span class="display" style="font-size: 64px; line-height: 1; font-weight: 800; letter-spacing: -2px; color: #3E63F2;">4,000+</span><span style="font-size: 15px; color: #5E6472;">internal APIs available as MCP tools</span></div>
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 0 48px; border-bottom: 1px solid #E3E6EB;"><span class="display" style="font-size: 64px; line-height: 1; font-weight: 800; letter-spacing: -2px;">100%</span><span style="font-size: 15px; color: #5E6472;">of manual provisioning automated</span></div>
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 0 48px;"><span class="display" style="font-size: 64px; line-height: 1; font-weight: 800; letter-spacing: -2px;">3</span><span style="font-size: 15px; color: #5E6472;">engineering teams, ~12 engineers</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+</body>
+</html>

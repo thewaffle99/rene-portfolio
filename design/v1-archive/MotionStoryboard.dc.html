@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #ECEEF1; font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; color: #1A1C22; -webkit-font-smoothing: antialiased; }
+    a { color: #3D5AFE; } a:hover { color: #2A45E0; }
+    .display { font-family: "Bricolage Grotesque", "Arial Narrow", sans-serif; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+    h2, h3, p { margin: 0; text-wrap: pretty; }
+  </style>
+</helmet>
+<div style="width: 1440px; height: 700px; box-sizing: border-box; background: #ECEEF1; padding: 64px 80px;">
+  <div style="display: flex; align-items: baseline; justify-content: space-between;">
+    <h2 class="display" style="font-size: 44px; font-weight: 700; letter-spacing: -1px; font-variation-settings: 'wdth' 88;">The cue call, frame by frame</h2>
+    <span class="mono" style="font-size: 13px; letter-spacing: 1.5px; color: #6B7080;">SIGNATURE MOTION · RUNS ONCE PER SECTION</span>
+  </div>
+
+  <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="position: relative; height: 240px; overflow: hidden; background: #0B0C10; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 30% 30% at 50% 50%, rgba(242,163,58,0.07) 0%, rgba(11,12,16,0) 70%);"></div>
+        <span class="display" style="position: relative; font-size: 54px; font-weight: 700; letter-spacing: -1.5px; color: #2E3139; font-variation-settings: 'wdth' 75;">Rene Marino</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="mono" style="font-size: 13px; letter-spacing: 1.5px; color: #8A8F9C;">0.0s · STANDBY</span>
+        <p style="font-size: 16px; line-height: 1.55; color: #444954;">The page loads almost dark. Just a faint spotlight and the name, narrow and dim.</p>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="position: relative; height: 240px; overflow: hidden; background: #111318; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 52% 60% at 50% 46%, rgba(242,163,58,0.24) 0%, rgba(242,163,58,0.07) 40%, rgba(17,19,24,0) 72%);"></div>
+        <span class="display" style="position: relative; font-size: 54px; font-weight: 700; letter-spacing: -1.5px; color: #F3F4F7; font-variation-settings: 'wdth' 90;">Rene Marino</span>
+        <span class="display" style="position: relative; font-size: 16px; font-weight: 500; color: #C5C8D0;">Every launch is a live show. I call the cues.</span>
+        <span style="position: relative; width: 220px; height: 24px; border: 1px solid #343741; border-radius: 6px; background: #1A1C22;"></span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="mono" style="font-size: 13px; letter-spacing: 1.5px; color: #F2A33A;">0.3–1.9s · GO</span>
+        <p style="font-size: 16px; line-height: 1.55; color: #444954;">The spotlight warms up and the name widens as it lights. Then the headline and ask box rise in.</p>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="position: relative; height: 240px; overflow: hidden; border-radius: 10px; display: grid; grid-template-rows: 70px minmax(0, 1fr);">
+        <div style="background: linear-gradient(180deg, #111318 0%, #3B3E46 100%);"></div>
+        <div style="background: #ECEEF1; padding: 18px 22px; display: flex; flex-direction: column; gap: 10px; border: 1px solid #D3D7DE; border-top: 0; border-radius: 0 0 10px 10px;">
+          <span class="mono" style="font-size: 10px; letter-spacing: 1.5px; color: #6B7080;">CUE 02 · THE CUE SHEET</span>
+          <span class="display" style="font-size: 26px; font-weight: 700; letter-spacing: -0.6px; font-variation-settings: 'wdth' 88;">Same job. Bigger stages.</span>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <span style="height: 8px; width: 88%; background: #D3D7DE; border-radius: 4px;"></span>
+            <span style="height: 8px; width: 72%; background: #D3D7DE; border-radius: 4px;"></span>
+            <span style="height: 8px; width: 80%; background: #F2A33A; opacity: 0.7; border-radius: 4px;"></span>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="mono" style="font-size: 13px; letter-spacing: 1.5px; color: #8A8F9C;">ON SCROLL · WORK LIGHT</span>
+        <p style="font-size: 16px; line-height: 1.55; color: #444954;">Each section fades from dark to lit as its cue is called. In the cue sheet, the current row's light turns on last.</p>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top: 44px; padding-top: 22px; border-top: 1px solid #D3D7DE; font-size: 15px; color: #555A66;">Reduced motion: every section starts fully lit, nothing pins or moves. Case study pages pin "The product call / How it was built" as you scroll.</p>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Resume — Rene Marino",
@@ -77,9 +78,9 @@ export default function Resume() {
       <style>{`@media print { .no-print { display: none !important; } body { background: #fff !important; } }`}</style>
 
       <div className="no-print flex items-center justify-between px-[5vw] py-6">
-        <a href="/" className="text-[15px] font-medium" style={{ color: colors.ink }}>
+        <Link href="/" className="text-[15px] font-medium" style={{ color: colors.ink }}>
           ← Back to site
-        </a>
+        </Link>
         <a
           href="/resume.pdf"
           download
@@ -101,7 +102,22 @@ export default function Resume() {
           Technical Product Manager — AI &amp; API Platforms
         </p>
         <p className="font-mono" style={{ marginTop: 14, fontSize: 13, letterSpacing: 0.5, color: colors.bodyGrey }}>
-          Orange County, CA · linkedin.com/in/rene-marino-597b2665 · github.com/thewaffle99
+          Orange County, CA ·{" "}
+          <a
+            href="https://www.linkedin.com/in/rene-marino-597b2665/"
+            className="hover:opacity-70"
+            style={{ color: "inherit", textDecoration: "underline", textDecorationColor: colors.ultramarine, textUnderlineOffset: 4 }}
+          >
+            linkedin.com/in/rene-marino-597b2665
+          </a>{" "}
+          ·{" "}
+          <a
+            href="https://github.com/thewaffle99"
+            className="hover:opacity-70"
+            style={{ color: "inherit", textDecoration: "underline", textDecorationColor: colors.ultramarine, textUnderlineOffset: 4 }}
+          >
+            github.com/thewaffle99
+          </a>
         </p>
 
         <section style={{ marginTop: 44 }}>

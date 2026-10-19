@@ -24,7 +24,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Lint
-        # TODO: fails on main today (3 react-hooks/set-state-in-effect errors); remove continue-on-error once fixed.
+        # TODO: fails on main today (@next/next/no-html-link-for-pages at src/app/privacy/page.tsx:64; 2x react-hooks/set-state-in-effect at src/components/PhotoCoinFlip.tsx:10 and :35); remove continue-on-error once fixed.
         continue-on-error: true
         run: npm run lint
       - name: Build
